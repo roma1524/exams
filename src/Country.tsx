@@ -1,50 +1,45 @@
-import React from 'react';
+import React, {MouseEvent} from 'react';
 import {City} from "./City";
 import {BanknotsType, MoneyType} from "./App";
 import styled from "styled-components";
 
 type CountryPropsType = {
-    data: any
-    setFilterValue: any // давайте подумаем, setFilter -это грузчик, у которого всегда в руках товар
+    data: MoneyType[]
+    setFilterValue: (arg: any) => void // давайте подумаем, setFilter -это грузчик, у которого всегда в руках товар
+    addMoney: (arg: any) => void
+    removeMoney: (arg: any) => void
   }
 
-export const Country = () => {
-    // с деструктуризацией пожалуйста
-    const setAll=()=>{
-        // засетаем 'All'
+export const Country: React.FC<CountryPropsType> = ({data, setFilterValue, addMoney, removeMoney}) => {
+
+
+    const setMoney=(event: MouseEvent<HTMLButtonElement>)=>{
+        setFilterValue(event.currentTarget.value);
     }
 
-    const setUSD=()=>{
-        // засетаем 'USD'
-    }
-
-    const setRUB=()=>{
-        // засетаем 'RUB'
-    }
-
-   const addMoneyHandler=()=>{
-
+   const addMoneyHandler=(event: MouseEvent<HTMLButtonElement>)=>{
+       addMoney(event.currentTarget.name);
    }
 
-   const removeMoneyHandler=()=>{
-
+   const removeMoneyHandler=(event: MouseEvent<HTMLButtonElement>)=>{
+       removeMoney(event.currentTarget.name);
    }
 
     return (
         <Terminal>
             <div>
-                <button onClick={setAll}>All</button>
-                <button onClick={setUSD}>Dollars</button>
-                <button onClick={setRUB}>Rubles</button>
+                <button value='All' onClick={setMoney}>All</button>
+                <button value='USD' onClick={setMoney}>Dollars</button>
+                <button value='RUB' onClick={setMoney}>Rubles</button>
             </div>
             <div>
                 {/*сделаем в последнюю очередь*/}
-                <button>Положить 100$</button>
-                <button >Положить 100р.</button>
-                <button >Снять 100$</button>
-                <button >Снять 100р.</button>
+                <button name={'USD'} onClick={addMoneyHandler}>Положить 10$</button>
+                <button name={'RUB'} onClick={addMoneyHandler}>Положить 10р.</button>
+                <button name={'USD'} onClick={removeMoneyHandler}>Снять 10$</button>
+                <button name={'RUB'} onClick={removeMoneyHandler}>Снять 10р.</button>
             </div>
-            <City data={"передаем денюжки в город"}/>
+            <City data={data}/>
         </Terminal>
     );
 };
