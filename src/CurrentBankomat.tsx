@@ -7,21 +7,21 @@ type CurrentBankomatPropsType = {
 }
 
 
-export const CurrentBankomat: React.FC<CurrentBankomatPropsType> = (props) => {
+export const CurrentBankomat: React.FC<CurrentBankomatPropsType> = ({money}) => {
     // с деструктуризацией пожалуйста
 
     return (
 
         <>
-            {props.money.banknote === 'USD' ?
+            {money.banknote === 'USD' ?
                 <BanknoteGreen>
-                    <Name>{props.money.banknote}</Name>
-                    <Nominal>{props.money.nominal}</Nominal>
+                    <Name>{money.banknote}</Name>
+                    <Nominal>{money.nominal}</Nominal>
                 </BanknoteGreen>
                 :
                 <BanknoteBlue>
-                    <Name>{props.money.banknote}</Name>
-                    <Nominal>{props.money.nominal}</Nominal>
+                    <Name>{money.banknote}</Name>
+                    <Nominal>{money.nominal}</Nominal>
                 </BanknoteBlue>
             }
         </>
