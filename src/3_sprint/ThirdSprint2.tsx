@@ -1,3 +1,4 @@
+export const SecondSprint_4 = {}
 // import {combineReducers, createStore} from 'redux'
 //
 // let initialState = {items: [{name: 'Dimych'}, {name: 'Ignat'}]}

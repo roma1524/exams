@@ -1,3 +1,4 @@
+export const SecondSprint_4 = {}
 // import axios from "axios"
 // import { createRoot } from "react-dom/client"
 // import { useEffect, useState } from "react"

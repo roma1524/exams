@@ -1,3 +1,4 @@
+export const SecondSprint_4 = {}
 // const students = [{ name: "Bob" }, { name: "Alex" }, { name: "Donald" }]
 // const filteredStudents = students.filter((s) => s.name !== "Kate")
 // const lengthDiff = students.length - filteredStudents.length

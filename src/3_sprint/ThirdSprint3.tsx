@@ -1,3 +1,4 @@
+export const SecondSprint_4 = {}
 // export const reducer = (state: any, action: any) => {
 //     switch (action.type) {
 //         case 'TRACK-ADDED':
@@ -50,7 +51,7 @@
 // 92 +
 
 
-import React from 'react'
+/*import React from 'react'
 import { createStore } from 'redux'
 import { Provider, useSelector, useDispatch } from 'react-redux'
 import ReactDOM from 'react-dom'
@@ -114,7 +115,7 @@ ReactDOM.render(<div>
         </XXX>
     </div>,
     document.getElementById('root')
-)
+)*/
 
 // Что нужно написать вместо XXX, YYY и ZZZ, чтобы отобразился список студентов?
 // Provider store store -

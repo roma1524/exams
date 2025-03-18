@@ -1,3 +1,4 @@
+export const SecondSprint_1 = {}
 /*import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

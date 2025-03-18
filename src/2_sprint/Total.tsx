@@ -1,3 +1,4 @@
+export const SecondSprint_4 = {}
 // type Action = {
 //     type: "SUM" | "SUB" | "MULT" | "DIV"
 //     payload: number
@@ -293,29 +294,29 @@
 //Какое значение лежит тут: friends[students[0].id][3]?
 // undefined
 
-type User = {
-    id: number
-    userName: string
-    email: string
-    password: string
-}
-
-type ChangeUserPasswordAction = {
-    type: "CHANGE-USER-PASSWORD"
-    payload: {
-        XXX
-        YYY
-    }
-}
-
-export const userReducer = (state: User[], action: ChangeUserPasswordAction): User[] => {
-    switch (action.type) {
-        case "CHANGE-USER-PASSWORD":
-            return state.map((u) => (u.id === action.payload.id ? { ...u, password: action.payload.newPassword } : u))
-        default:
-            return state
-    }
-}
+// type User = {
+//     id: number
+//     userName: string
+//     email: string
+//     password: string
+// }
+//
+// type ChangeUserPasswordAction = {
+//     type: "CHANGE-USER-PASSWORD"
+//     payload: {
+//         XXX
+//         YYY
+//     }
+// }
+//
+// export const userReducer = (state: User[], action: ChangeUserPasswordAction): User[] => {
+//     switch (action.type) {
+//         case "CHANGE-USER-PASSWORD":
+//             return state.map((u) => (u.id === action.payload.id ? { ...u, password: action.payload.newPassword } : u))
+//         default:
+//             return state
+//     }
+// }
 
 // Какой код должен быть написан вместо XXX и YYY в типе
 // ChangeUserPasswordAction, что бы редьюсер работал?
@@ -417,7 +418,7 @@ export const userReducer = (state: User[], action: ChangeUserPasswordAction): Us
 // Что надо написать вместо XXX чтобы в консоли появилась строка "IT-INCUBATOR"?
 // type: 'EXP' +
 
-type User = {
+/*type User = {
     id: number
     name: string
     status: "online" | "offline"
@@ -447,14 +448,14 @@ const addresses: Adresses = {
 
 export const updateUserAddress = (userID: number, key: string, newValue: string) => {
     return { ...addresses, [userID]: { ...addresses[userID], [key]: newValue } }
-}
+}*/
 // Дан список пользователей и структура, хранящая адреса пользователей.
 // Так же дана функция updateUserAddress,
 // которая обновляет указанное в параметрах поле в адресе пользователя.
 // Пример использования функции: updateUserAddress(2, "city", "Dnepropetrovsk")
 // Что надо написать вместо ххх, чтобы функция работала корректно?
 // userID +
-
+/*
 type Student = {
     id: number
     name: string
@@ -476,7 +477,7 @@ export const friends: Friends = {
     2: ["Jack", "Lewis", "Thomas"],
     3: ["William", "Michael", "Lewis"],
     4: ["Oscar", "James", "William"],
-}
+}*/
 
 //Дан список студентов и структура,
 //которая содержит список друзей каждого из студентов.
@@ -484,27 +485,27 @@ export const friends: Friends = {
 //Какое значение лежит тут: friends[3][1]?
 // "Michael" +
 
-import { useState } from "react"
-import { createRoot } from "react-dom/client"
-
-const PasswordChecker = () => {
-    const [password, setPassword] = useState<string>("")
-
-    return (
-        <main>
-            <p>Your password must have more than 8 charters!</p>
-            <input
-                placeholder={"Enter your password"}
-                value={password}
-                onChange={(e) => setPassword(e.currentTarget.value)}
-                type={"password"}
-            />
-            {password.length < 9 && <p style={{ color: "red" }}>The password is too short!</p>}
-        </main>
-    )
-}
-
-createRoot(document.getElementById("root")!).render(<PasswordChecker />)
+// import { useState } from "react"
+// import { createRoot } from "react-dom/client"
+//
+// const PasswordChecker = () => {
+//     const [password, setPassword] = useState<string>("")
+//
+//     return (
+//         <main>
+//             <p>Your password must have more than 8 charters!</p>
+//             <input
+//                 placeholder={"Enter your password"}
+//                 value={password}
+//                 onChange={(e) => setPassword(e.currentTarget.value)}
+//                 type={"password"}
+//             />
+//             {password.length < 9 && <p style={{ color: "red" }}>The password is too short!</p>}
+//         </main>
+//     )
+// }
+//
+// createRoot(document.getElementById("root")!).render(<PasswordChecker />)
 
 // Что надо вставить вместо XXX, чтобы код работал нормально?
 // password.length
@@ -551,7 +552,7 @@ createRoot(document.getElementById("root")!).render(<PasswordChecker />)
 // Что надо написать вместо XXX, чтобы при клике кнопка становилась красной?
 // isColored
 
-type Student = {
+/*type Student = {
     id: number
     name: string
 }
@@ -572,7 +573,7 @@ export const friends: Friends = {
     2: ["Jack", "Lewis", "Thomas"],
     3: ["William", "Michael", "Lewis"],
     4: ["Oscar", "James", "William"],
-}
+}*/
 
 //Дан список студентов и структура,
 //которая содержит список друзей каждого из студентов.

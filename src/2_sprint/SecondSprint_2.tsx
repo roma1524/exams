@@ -1,5 +1,6 @@
-
-/*type Student = {
+export const SecondSprint_2 = {}
+/*
+type Student = {
     id: number
     name: string
 }
@@ -20,7 +21,8 @@ export const friends: Friends = {
     2: ["Jack", "Lewis", "Thomas",],
     3: ["William", "Michael", "Lewis",],
     4: ["Oscar", "James", "William",],
-}*/
+}
+*/
 
 //Дан список студентов и структура,
 //которая содержит список друзей каждого из студентов.

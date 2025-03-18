@@ -1,4 +1,4 @@
-//
+export const SecondSprint_4 = {}
 // type ActionType = {
 //     type: "SUM"|"SUB"|"MULT"|"DIV"|"EXP"
 //     payload: number
@@ -220,6 +220,7 @@ type:"DIV"
 type: "DIV"
 id: number password: string
 */
+/*
 
 const name = "Konstantin"
 
@@ -408,4 +409,4 @@ for (let i = 0; i < 5; i++) {
 export const studentName = result - 4 ? "Leo" : "Dima"
 
 // Какое значение получит переменная studentName?
-// "Dima" +
+// "Dima" +*/
